@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+@keyframes animeBG {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+ 
+#reset{
+  font-family:'Times New Roman', Times, serif;
+  display: inline-block;
+  font-size: 1em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #cd0404;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  }
+  #reset:focus {
+  outline: 0;
+  }
+  #reset:before, #reset:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 10px;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  }
+  #reset:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, transparent 20%, #cd0404 20%, transparent 30%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, transparent 10%, #cd0404 15%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  #reset:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, transparent 10%, #cd0404 15%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%), radial-gradient(circle, #cd0404 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  #reset:active {
+  transform: scale(0.9);
+  background-color: #790303;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  #reset.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  #reset.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  @keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+  @keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+ 
+#calculate{
+  font-family:'Times New Roman', Times, serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #046fcd;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  }
+  #calculate:focus {
+  outline: 0;
+  }
+  #calculate:before, #calculate:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  }
+  #calculate:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, transparent 20%, #046fcd 20%, transparent 30%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, transparent 10%, #046fcd 15%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  #calculate:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, transparent 10%, #046fcd 15%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%), radial-gradient(circle, #046fcd 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  #calculate:active {
+  transform: scale(0.9);
+  background-color: #790303;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  #calculate.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  #calculate.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  @keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+  @keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+#remove1{
+  font-family:'Times New Roman', Times, serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0066;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  }
+  #remove1:focus {
+  outline: 0;
+  }
+  #remove1:before, #remove1:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  }
+  #remove1:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0066 20%, transparent 30%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0066 15%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  #remove1:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0066 15%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%), radial-gradient(circle, #ff0066 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  #remove1:active {
+  transform: scale(0.9);
+  background-color: #790303;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  #remove1.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  #remove1.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  @keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+  @keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+
+
+.bubbly-button {
+  font-family:'Times New Roman', Times, serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #067913;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, transparent 20%, #067913 20%, transparent 30%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, transparent 10%, #067913 15%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, transparent 10%, #067913 15%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%), radial-gradient(circle, #067913 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #08ac1b;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+ }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+ }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+ }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+ }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+ }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+ }
+}
+
+
+
+#orta{
+    position: absolute; 
+     margin-left: 150px; 
+     margin-top: 10px;
+     margin-bottom: 3px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.selection{
+    position: absolute; 
+     margin-left: 400px; 
+     margin-top: 1px;
+     margin-bottom: 3px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.buttons{
+    margin-left: 180px;
+}
+.contex{
+    position: absolute;
+    margin-left: 240px; 
+    top: 55px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contex{
+  position: absolute;
+  margin-left: 160px; 
+  top: 55px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.contex1{
+  position: absolute;
+  margin-left: 550px; 
+  top: 35px;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.cal{
+    margin-left: 200px;
+    margin-top: 30px;
+    
+}
+
+body {
+    margin: 10px 20px;
+    width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #2bc94d, #f576a7, #51afd1, #d14545);
+	background-size: 500% 500%;
+	animation: animeBG 10s ease infinite;
+	animation-direction: alternate;
+}
+.red {
+    position: relative;
+    float: left;
+    width: 30%; height: 45px;
+    background: #eeeeeeb1;
+    padding: 15px;
+    box-sizing: border-box;
+    animation: red 2s;
+  }
+    .red:after {
+      content: '';
+      position: absolute;
+      width: 40%;
+      top: 0; bottom: 0;
+      right:-7%;
+      background: #000000;
+      transform: skew(30deg);
+     
+    }
+  .blue {
+    position: relative;
+    float: right;
+    width: 65%; height: 45px;
+    background: #000000;
+    padding: 15px;
+    box-sizing: border-box;
+    animation: #ffffff 2s;
+   
+  }
+    .blue:after {
+      content: '';
+      position: absolute;
+      width: 40%;
+      top: 0; bottom: 0;
+      left:-5%;
+      background: #000000;
+      transform: skew(30deg);
+     
+    }
+  
+  @keyframes red {
+    0% {
+      margin-left: -30%;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
+  
+  @keyframes blue {
+    0% {
+      margin-right: -65%;
+    }
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  #head {
+    font-size: 25px;
+    font-weight: bold; 
+    font-style: italic;
+
+}
+#Pref{
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.instructions {
+    font-size: 14px;
+    margin: 10px 20px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0000005d;
+    border: 3px solid rgba(255, 255, 255, 0.633);
+}
+td {
+    padding: 0 2px;
+}
+table input {
+    text-align: center;
+    border: none;
+    width: 100px;
+}
+.hide {
+    display: none;
+}
+
+
+button {
+    padding: 5px;
+}
+
+.schedule-table-process,
+.schedule-table-process td {
+    border: 1px solid black;
+}
+
+.schedule-table-process {
+    margin-left: 6px;
+}
+
+.schedule-table-time,
+.schedule-table-time td {
+    text-align: left;
+    border: 1px solid white;
+}
+
+#algorithm-chart-div {
+    width: 100%;
+    height: 70%;
+}
+
+#round-robin-chart-div {
+    height: 40%;
+    width: 80%;
+}
+
+#gantt-chart {
+    height: 190px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 1000px;
+    font-style: italic;
+}
+
+#timeline-chart {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 350px;
+    width: 1000px;
+    font-style: italic;    
+}
+
+#output {
+    margin-top: 20px;
+}
+
+#priority-toggle-btn {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 0;
+    width: 60px;
+}
+
+.preferences {
+    list-style: none;
+}
+
+thead {
+    font-weight: bold;
+}
+
+#time-log-table-div {
+    margin-top: 10vh;
+    position: relative;
+}
+
+.time-log-table {
+    width: 10%;
+    position: absolute;
+}
+
+#remain-table {
+    left: 7.5%;
+}
+
+#ready-table {
+    left: 32.5%;
+}
+
+#running-table {
+    right: 32.5%;
+}
+
+#block-table {
+    left: 45%;
+    top: 8vw;
+}
+
+#terminate-table {
+    right: 7.5%;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 100px;
+}
+
+#remain-ready {
+    left: 20.5%;
+    top: -62px;
+}
+
+#ready-running {
+    transform: rotate(180deg);
+    left: 47%;
+    top: -15px;
+    font-size: 80px;
+}
+
+#running-ready {
+    left: 47%;
+    top: -60px;
+    font-size: 80px;
+}
+
+#running-terminate {
+    right: 20.5%;
+    top: -62px;
+}
+
+#running-block {
+    transform: rotate(135deg);
+    left: 52%;
+    top: 20px;
+}
+
+#block-ready {
+    transform: rotate(225deg);
+    left: 40%;
+    top: 20px;
+}

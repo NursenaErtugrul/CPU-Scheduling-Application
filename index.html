@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Algorithms</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="red">
+        <span id="head">Scheduling Algorithms </span>
+    </div>
+    <div class="blue"></div>
+    <br><br><br> <br>
+    <div class="container">
+        <div class="row" id="orta">
+          <div><form id="algorithms-form">
+            <label id="orta" for="algo"><span style="font-size: 34px;">ALGORTIHMS</span></label><br>
+            <select class="selection" name="algo" id="algo">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="srtf">Shortest Remaining Job First (SRTF)</option>
+                <option value="rr">Round Robin</option>
+                <option value="pnp">Priority (Non Preemptive)</option>
+                <option value="pp">Priority (Preemptive)</option>
+                <option value="hrrn">Highest Response Ratio Next (HRRN)</option>
+            </select>
+        </form><br>
+        <table table class="main-table" style="width:750px; 
+        color: rgb(255, 255, 255);
+       height: 90px;
+       font-style: italic;
+       margin-left: 20px; 
+       margin-top: 90px;
+       margin-bottom: auto;        
+       border:2px solid rgb(255, 251, 251);">
+            <thead>
+                <tr>
+                    <th class="process-id">Process</th>
+                    <th class="priority hide">Priority</th>
+                    <th class="arrival-time">Arrival Time</th>
+                    <th class="process-time" colspan="1">Burst Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="process-id" rowspan="2">P1</td>
+                    <td class="priority hide" rowspan="2"><input type="number" min="1" step="1" value="1"></td>
+                    <td class="arrival-time" rowspan="2"><input type="number" min="0" step="1" value="0"> </td>
+                </tr>
+                <tr>
+                    <td class="process-time cpu process-input"><input type="number" min="1" step="1" value="1"> </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="button" class="add-btn buttons bubbly-button" id="add1">Add Process</button>
+        <button type="button" class="remove-btn buttons bubbly-button " id="remove1">Delete Process</button>
+        
+        <div id="time-quantum" class="hide contex1"><!-- bu divi silince calculate button çalışmıyor-->
+            <br>
+            <label for="tq">Time Quantum : </label>
+            <input type="number" name="Time Quantum" id="tq" min="1" step="1" value="1">
+        </div>
+        <br>
+        <button type="button" id="calculate" class=" bubbly-button cal">Calculate</button>
+        <button type="button" id="reset" class=" bubbly-button cal" onClick="window.location.reload();">Reset</button>
+        <div id="output"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
